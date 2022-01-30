@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "docker": "docker run --rm -it -p '8000:8000' --name stellar stellar/quickstart --standalone", 
+        "servers": "./federationA/federation.exe & ./federationB/federation.exe & ./complianceA/compliance.exe & ./complianceB/compliance.exe & ./bridgeA/bridge.exe & ./bridgeB/bridgeB.exe",
+        "express-servers": "nodemon servers/DBServerA & nodemon servers/DBServerB & nodemon servers/CallbacksA & nodemon servers/CallbacksB & nodemon servers/AuthServerA & nodemon AuthServerB",
+        "fund": "node servers/Createaccountnew"
+    }
+}
